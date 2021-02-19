@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <users xmlns:android="http://schemas.android.com/apk/res/android">
     <user>
-        <name>Сас2001</name>
-        <age>19.10.2012</age>
+        <name>Имя1</name>
+        <age>1</age>
     </user>
     <user>
-        <name>Вантуз-12</name>
-        <age>18.21.2345</age>
+        <name>Имя2</name>
+        <age>2</age>
     </user>
     <user>
-        <name>Мастер Шифу-228</name>
-        <age>90.123.1652</age>
+        <name>Имя3</name>
+        <age>3</age>
     </user>
 </users>

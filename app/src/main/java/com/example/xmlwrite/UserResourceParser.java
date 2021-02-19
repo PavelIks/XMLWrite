@@ -8,7 +8,8 @@ import java.util.ArrayList;
 public class UserResourceParser
 {
     private ArrayList<User> users;
-    public UserResourceParser(){
+    public UserResourceParser()
+    {
         users = new ArrayList<>();
     }
 
@@ -46,27 +47,37 @@ public class UserResourceParser
                                 textValue = xpp.getText();
                                 break;
                             }
-                    case XmlPullParser.END_TAG:
-                        {
-                            if(inEntity) {
-                            if ("user".equalsIgnoreCase(tagName)) {
-                                inEntity = false;
-                                users.add(currentUser);
-                            } else if ("name".equalsIgnoreCase(tagName)) {
-                                currentUser.setName(textValue);
-                            } else if ("age".equalsIgnoreCase(tagName)) {
-                                currentUser.setAge(textValue);
-                            }
-                        }
-                        break;
-                    }
+                            case XmlPullParser.END_TAG:
+                                {
+                                    if(inEntity)
+                                    {
+                                        if ("user".equalsIgnoreCase(tagName))
+                                        {
+                                            inEntity = false;
+                                            users.add(currentUser);
+                                        }
+                                        else if ("name".equalsIgnoreCase(tagName))
+                                        {
+                                            currentUser.setName(textValue);
+                                        }
+                                        else if ("age".equalsIgnoreCase(tagName))
+                                        {
+                                            currentUser.setAge(textValue);
+                                        }
+                                    }
+                                    break;
+                                }
                 }
                 eventType = xpp.next();
             }
-        } catch (XmlPullParserException e) {
+        }
+        catch (XmlPullParserException e)
+        {
             status = false;
             e.printStackTrace();
-        } catch (IOException e) {
+        }
+        catch (IOException e)
+        {
             e.printStackTrace();
         }
         return status;

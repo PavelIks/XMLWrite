@@ -5,14 +5,54 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
+    <!--XML-->
     <ListView
-        android:id="@+id/userView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:id="@+id/ListViewXMLID"
+        android:layout_width="408dp"
+        android:layout_height="182dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+    <!--SQLite-->
+
+    <Button
+        android:id="@+id/ButtonSQLiteID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="180dp"
+        android:onClick="onClickINSERT"
+        android:text="INSERT"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonSQLiteID"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ListViewSQLiteID" />
+
+    <Button
+        android:id="@+id/buttonSQLiteID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="233dp"
+        android:layout_marginBottom="180dp"
+        android:onClick="onClickSELECT"
+        android:text="SELECT"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ButtonSQLiteID"
+        app:layout_constraintTop_toBottomOf="@+id/ListViewSQLiteID" />
+
+    <ListView
+        android:id="@+id/ListViewSQLiteID"
+        android:layout_width="408dp"
+        android:layout_height="182dp"
+        app:layout_constraintBottom_toTopOf="@+id/ButtonSQLiteID"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ListViewXMLID"
+        app:layout_constraintVertical_bias="0.9" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
